@@ -1,0 +1,53 @@
+body {
+	width: 95%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Lato', serif;
+	font-weight: 300;
+}
+
+div {
+	width: 100%;
+	display: inline-block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lora', serif;
+}
+
+h1,h2,h4 {
+	font-weight: 400;
+}
+
+.page-header {
+	width: 100%;
+}
+
+.section-header {
+	width: 160px;
+	vertical-align: top;
+}
+
+.section-content {
+	width: 100%;
+	max-width: 780px;
+}
+
+.section-content div {
+	vertical-align: top;
+	width: auto;
+}
+
+#header div {
+	width: auto;
+}
+
+.name {
+	float: left;
+}
+
+.contact {
+	text-align: right;
+	float: right;
+}
