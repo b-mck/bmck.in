@@ -14,6 +14,7 @@ body {
 section {
     display: flex;
     width: 100%;
+    padding-bottom: 5px;
 }
 div {
     width: 100%;
@@ -33,11 +34,11 @@ h4 {
     font-weight: 400;
 }
 ul {
-    list-style-type: none;
+    list-style: url("../elements/bullet.svg");
 }
 
-#skills ul > li:not(.full-width) {
-    width: 33%;
+#skills-sections ul:not(.full-width) {
+    width: 25%;
     display: inline-block;
 }
 
@@ -89,6 +90,9 @@ ul {
     .section-header {
         width: 18%;
         font-size: 10pt;
+    }
+    #skills .section-header h2 {
+        margin-top: 22px;
     }
     .section-content p {
         break-inside: avoid;
