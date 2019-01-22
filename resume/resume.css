@@ -27,6 +27,13 @@ h4,
 h5,
 h6 {
     font-family: "Lora", serif;
+    padding: 0;
+    margin: 0;
+}
+h2,
+h3 {
+    line-height: 52px;
+    vertical-align: baseline;
 }
 h1,
 h2,
@@ -72,19 +79,17 @@ ul {
         margin-top: 0;
         break-inside: avoid;
     }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        padding: 0;
-        margin: 0;
-    }
     div {
         width: 100%;
         display: inline-block;
     }
+    h2,
+    h3 {
+        font-size: 12pt;
+        line-height: 32px;
+        vertical-align: baseline;
+    }
+
     .noprint {
         display: none !important;
     }
@@ -97,9 +102,6 @@ ul {
     .section-header {
         width: 18%;
         font-size: 10pt;
-    }
-    #skills .section-header h2 {
-        margin-top: 22px;
     }
     .section-content p {
         break-inside: avoid;
