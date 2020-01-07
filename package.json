@@ -1,0 +1,13 @@
+{
+  "name": "bmck.in",
+  "version": "1.0.0",
+  "description": "Static and dynamic web serving for bmck.in",
+  "main": "index.js",
+  "repository": "git@github.com:b-mck/bmck.in.git",
+  "author": "ben@bmck.in",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
