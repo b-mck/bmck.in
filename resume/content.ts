@@ -8,16 +8,31 @@ interface Location {
     postalcode?: string;
 }
 
-interface EmploymentHistoryPosition {
+interface HistoryItem {
+    highlights: string[];
+}
+
+interface EmploymentHistoryPosition extends HistoryItem {
     title: string;
     dates: { start: string; end?: string };
-    highlights: string[];
 }
 
 interface EmploymentHistory {
     company: string;
     location: Location;
     positions: EmploymentHistoryPosition[];
+}
+
+interface EducationHistory extends HistoryItem {
+    school: string;
+    location: Location;
+    graduation: string;
+    gpa: string;
+}
+
+interface Skills {
+    relevant: string[];
+    general: string[];
 }
 
 interface ResumeContent {
@@ -28,6 +43,8 @@ interface ResumeContent {
     };
     intro: string;
     jobs: EmploymentHistory[];
+    education: EducationHistory[];
+    skills: Skills;
 }
 
 export const resumeContent: ResumeContent = {
@@ -103,6 +120,21 @@ export const resumeContent: ResumeContent = {
             ],
         },
         {
+            company: 'Northwestern University Advanced Media Production Studio',
+            location: { city: 'Evanston', state: 'IL', country: 'USA' },
+            positions: [
+                {
+                    title: 'Audio Recordist',
+                    dates: { start: '2005-02-15', end: '2008-05-31' },
+                    highlights: [
+                        "Operated multi-channel Pro Tools recording setup for Northwestern's internal videography team, capturing School of Music opera and symphony performances.",
+                        'Attended dress rehearsals to place microphones and set up sessions and operated recording equipment during performances.',
+                        'In addition to providing audio for the video production team, recorded all performances for the School of Music archives.',
+                    ],
+                },
+            ],
+        },
+        {
             company: 'Big House Casting & Audio',
             location: { city: 'Chicago', state: 'IL', country: 'USA' },
             positions: [
@@ -118,5 +150,57 @@ export const resumeContent: ResumeContent = {
                 },
             ],
         },
+        {
+            company: 'Northwestern University Information Technology',
+            location: { city: 'Evanston', state: 'IL', country: 'USA' },
+            positions: [
+                {
+                    title: 'Residential Network Connector (ResCon)',
+                    dates: { start: '2004-09-15', end: '2006-06-15' },
+                    highlights: [
+                        'Responded to support tickets submitted by students with computer problems, ranging from networking issues to severe malware infections.',
+                        'Eradicated viruses and installed university-recommended malware protection before signing off on the computer to allow it back on the network.',
+                        'Became intimate with the Windows XP registry and Safe Mode and developed a reputation with my supervisors for cleaning out infections while preserving user data when others would have given up.',
+                    ],
+                },
+            ],
+        },
     ],
+    education: [
+        {
+            school: 'Northwestern University',
+            location: {
+                city: 'Evanston',
+                state: 'IL',
+                country: 'USA',
+            },
+            graduation: '2006-06-10',
+            gpa: '3.6',
+            highlights: [
+                'Studied and practiced film production with an emphasis on sound design.',
+                'Completed Fundamentals of Computer Programming, which began my fascination with code.',
+                'Served as producer for the electronic music format at WNUR-FM.',
+                'Maintained a 3.6 GPA.',
+            ],
+        },
+    ],
+    skills: {
+        relevant: [
+            'TypeScript',
+            'JavaScript',
+            'Node.js',
+            'HTML/CSS',
+            'GraphQL/REST API design',
+            'SQL',
+            'Docker',
+            'Git',
+            'Linux/UNIX',
+        ],
+        general: [
+            'SOLO Wilderness First Aid 16hr/BCLL WFA for Mountain Bikers 30hr certifications',
+            'Drums, bass and guitar',
+            'Recording and audio production',
+            'Bicycle assembly and maintenance',
+        ],
+    },
 };
