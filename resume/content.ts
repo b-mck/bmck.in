@@ -18,7 +18,7 @@ interface EmploymentHistoryPosition extends HistoryItem {
 }
 
 interface EmploymentHistory {
-    company: string;
+    organization: string;
     location: Location;
     positions: EmploymentHistoryPosition[];
 }
@@ -43,6 +43,7 @@ interface ResumeContent {
     };
     intro: string;
     jobs: EmploymentHistory[];
+    volunteer: EmploymentHistory[];
     education: EducationHistory[];
     skills: Skills;
 }
@@ -60,7 +61,7 @@ export const resumeContent: ResumeContent = {
     intro: `Web application developer currently fluent in JS-based languages, Node and React. Flexible, adaptable critical thinker and quick study. Passionate about quality, maintainability, and reusability of code, bicycles, electronics, clothing, and everything else I own, use, or make; sustainability; the outdoors; music; cycling; the pursuit and advancement of knowledge.`,
     jobs: [
         {
-            company: 'PriceWaiter',
+            organization: 'PriceWaiter',
             location: {
                 city: 'Bellingham',
                 state: 'WA',
@@ -81,7 +82,7 @@ export const resumeContent: ResumeContent = {
             ],
         },
         {
-            company: 'SpringCM',
+            organization: 'SpringCM',
             location: {
                 city: 'Chicago',
                 state: 'IL',
@@ -120,7 +121,8 @@ export const resumeContent: ResumeContent = {
             ],
         },
         {
-            company: 'Northwestern University Advanced Media Production Studio',
+            organization:
+                'Northwestern University Advanced Media Production Studio',
             location: { city: 'Evanston', state: 'IL', country: 'USA' },
             positions: [
                 {
@@ -135,7 +137,7 @@ export const resumeContent: ResumeContent = {
             ],
         },
         {
-            company: 'Big House Casting & Audio',
+            organization: 'Big House Casting & Audio',
             location: { city: 'Chicago', state: 'IL', country: 'USA' },
             positions: [
                 {
@@ -151,7 +153,7 @@ export const resumeContent: ResumeContent = {
             ],
         },
         {
-            company: 'Northwestern University Information Technology',
+            organization: 'Northwestern University Information Technology',
             location: { city: 'Evanston', state: 'IL', country: 'USA' },
             positions: [
                 {
@@ -161,6 +163,49 @@ export const resumeContent: ResumeContent = {
                         'Responded to support tickets submitted by students with computer problems, ranging from networking issues to severe malware infections.',
                         'Eradicated viruses and installed university-recommended malware protection before signing off on the computer to allow it back on the network.',
                         'Became intimate with the Windows XP registry and Safe Mode and developed a reputation with my supervisors for cleaning out infections while preserving user data when others would have given up.',
+                    ],
+                },
+            ],
+        },
+    ],
+    volunteer: [
+        {
+            organization: 'FIRST Robotics Team 2605 "Seamonsters Robotics"',
+            location: {
+                city: 'Bellingham',
+                state: 'WA',
+                country: 'USA',
+            },
+            positions: [
+                {
+                    title: 'Mentor, Programming Team',
+                    dates: {
+                        start: '2014-08-15',
+                        end: '2017-06-30',
+                    },
+                    highlights: [
+                        'Worked with the team to convert the program from C++ to Python, lowering the barrier for new programmers and enabling students to contribute to and benefit from a nationwide developer community.',
+                        'Fostered an open-source, collaborative spirit in a team that had previously been dominated by the individual knowledge and efforts of a few students.',
+                        'Worked with the team to choose new student leaders each year and wrote awards recommendations for exceptional team members.',
+                    ],
+                },
+            ],
+        },
+        {
+            organization: 'FIRST Robotics Team 3711 "Iron Mustangs"',
+            location: {
+                city: 'Trout Lake',
+                state: 'WA',
+                country: 'USA',
+            },
+            positions: [
+                {
+                    title: 'Mentor',
+                    dates: { start: '2013-09-15', end: '2014-06-30' },
+                    highlights: [
+                        'Mentored high school students at a tiny rural school (my alma mater) that has fielded nationally competitive robotics teams.',
+                        'Challenged myself by dusting off my C++ as well as in teaching coding to high schoolers at widely varied skill levels.',
+                        'Supported and guided students on all aspects of the robot project: coding, design, strategy, time management and prioritization.',
                     ],
                 },
             ],
