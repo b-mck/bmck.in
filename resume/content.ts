@@ -17,7 +17,7 @@ interface EmploymentHistoryPosition extends HistoryItem {
     dates: { start: string; end?: string };
 }
 
-interface EmploymentHistory {
+export interface EmploymentHistory {
     organization: string;
     location: Location;
     positions: EmploymentHistoryPosition[];
