@@ -1,5 +1,5 @@
 body {
-    font-family: "Lato", serif;
+    font-family: 'Lato', serif;
     font-weight: 300;
     margin-right: auto;
     margin-left: auto;
@@ -35,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lora", serif;
+    font-family: 'Lora', serif;
     padding: 0;
     margin: 0;
 }
@@ -58,16 +58,22 @@ h3 .location {
 }
 
 ul {
-    list-style: url("../elements/bullet.svg");
+    list-style: url('../elements/bullet.svg');
 }
 
-#skills,
-#references {
-    align-items: center;
-}
-#skills-sections ul:not(.full-width) {
-    width: 25%;
+#skills-sections ul:not(.full-width) li {
+    width: 30%;
     display: inline-block;
+    overflow-x: visible;
+}
+#skills-sections ul:not(.full-width) li::before {
+    /* re-hack in fancy bullets since these list items are not `display`ed `list-item` */
+    content: url('../elements/bullet.svg');
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: -0.75rem;
+    position: absolute;
 }
 
 .page-header {
@@ -139,6 +145,6 @@ ul {
         display: inline;
     }
     .contact p:not(:first-child)::before {
-        content: " | ";
+        content: ' | ';
     }
 }
