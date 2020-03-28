@@ -55,6 +55,7 @@ h3 .location {
     font-weight: 400;
     font-style: italic;
     font-size: 0.8em;
+    margin-left: 0.4em;
 }
 
 ul {
@@ -62,8 +63,8 @@ ul {
 }
 
 #skills-sections ul:not(.full-width) li {
-    width: 30%;
     display: inline-block;
+    width: 33%;
     overflow-x: visible;
 }
 #skills-sections ul:not(.full-width) li::before {
@@ -104,9 +105,8 @@ ul {
         width: 100%;
         max-width: initial;
         margin-top: 0;
-        font-size: 11px;
     }
-    section {
+    section div {
         break-inside: avoid;
     }
     div {

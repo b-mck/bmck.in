@@ -39,7 +39,7 @@ const Jobs: React.FC<{ list: EmploymentHistory[] }> = ({ list }) => (
                     key={job.organization.toLowerCase()}
                 >
                     <h3>
-                        {job.organization}{' '}
+                        {job.organization}
                         <span className="location">{`${job.location.city}, ${job.location.state}`}</span>
                     </h3>
                 </div>
@@ -117,7 +117,7 @@ const Resume: React.FC = () => {
                                 id={school.school.toLowerCase()}
                             >
                                 <h3>
-                                    {school.school}{' '}
+                                    {school.school}
                                     <span className="location">{`${school.location.city}, ${school.location.state}`}</span>
                                 </h3>
                                 <h5>{`Class of ${moment(
