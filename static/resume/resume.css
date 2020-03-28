@@ -15,6 +15,18 @@ div {
     width: 100%;
     display: inline-block;
 }
+ul {
+    list-style-type: none;
+}
+ul li::before {
+    /* hack fancy bullets since some list items are not `display`ed `list-item` */
+    content: url('../elements/bullet.svg');
+    height: 0.5em;
+    width: 0.5em;
+    margin-top: 0.5em;
+    margin-left: -1em;
+    position: absolute;
+}
 
 @media screen and (max-width: 959px) {
     section {
@@ -58,23 +70,10 @@ h3 .location {
     margin-left: 0.4em;
 }
 
-ul {
-    list-style: url('../elements/bullet.svg');
-}
-
 #skills-sections ul:not(.full-width) li {
     display: inline-block;
     width: 33%;
     overflow-x: visible;
-}
-#skills-sections ul:not(.full-width) li::before {
-    /* re-hack in fancy bullets since these list items are not `display`ed `list-item` */
-    content: url('../elements/bullet.svg');
-    height: 0.5rem;
-    width: 0.5rem;
-    margin-top: 0.5rem;
-    margin-left: -0.75rem;
-    position: absolute;
 }
 
 .page-header {
