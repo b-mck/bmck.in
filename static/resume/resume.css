@@ -9,18 +9,18 @@ body {
 section {
     display: flex;
     width: 100%;
-    padding-bottom: 5px;
+    padding-bottom: 0.3rem;
 }
 div {
     width: 100%;
     display: inline-block;
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 959px) {
     section {
         display: block;
         width: 100%;
-        padding-bottom: 5px;
+        padding-bottom: 0.3rem;
     }
     div {
         display: block;
@@ -41,8 +41,8 @@ h6 {
 }
 h2,
 h3 {
-    font-size: 20px;
-    line-height: 52px;
+    font-size: 1.3rem;
+    line-height: 3rem;
     vertical-align: baseline;
 }
 h1,
@@ -115,8 +115,8 @@ ul {
     }
     h2,
     h3 {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 1.1rem;
+        line-height: 2rem;
         vertical-align: baseline;
     }
     a {
@@ -127,7 +127,7 @@ ul {
     #summary {
         display: block;
         clear: both;
-        margin: 10px 5% 10px 5%;
+        margin: 0.6rem 5% 0.6rem 5%;
     }
 
     .noprint {
