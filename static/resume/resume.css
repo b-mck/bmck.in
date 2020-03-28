@@ -28,19 +28,6 @@ ul li::before {
     position: absolute;
 }
 
-@media screen and (max-width: 959px) {
-    section {
-        display: block;
-        width: 100%;
-        padding-bottom: 0.3rem;
-    }
-    div {
-        display: block;
-    }
-    div.contact {
-        text-align: left !important;
-    }
-}
 h1,
 h2,
 h3,
@@ -70,12 +57,6 @@ h3 .location {
     margin-left: 0.4em;
 }
 
-#skills-sections ul:not(.full-width) li {
-    display: inline-block;
-    width: 33%;
-    overflow-x: visible;
-}
-
 .page-header {
     align-content: space-between;
     align-items: center;
@@ -94,6 +75,34 @@ h3 .location {
 .contact p {
     padding: 0;
     margin: 0;
+}
+
+@media screen and (max-width: 959px) {
+    section {
+        display: block;
+        width: 100%;
+        padding-bottom: 0.3rem;
+    }
+    div {
+        display: block;
+    }
+    div.contact {
+        text-align: left !important;
+    }
+
+    #skills-sections ul:not(.full-width) li {
+        display: inherit;
+        width: inherit;
+        overflow-x: inherit;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    #skills-sections ul:not(.full-width) li {
+        display: inline-block;
+        width: 33%;
+        overflow-x: visible;
+    }
 }
 
 @media print {
