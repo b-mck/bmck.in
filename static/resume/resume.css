@@ -113,6 +113,7 @@ h3 .location {
         width: 100%;
         max-width: initial;
         margin-top: 0;
+        font-size: 10pt;
     }
     section div {
         break-inside: avoid;
@@ -121,10 +122,14 @@ h3 .location {
         width: 100%;
         display: inline-block;
     }
-    h2,
+    h2 {
+        font-size: 0.8em;
+        line-height: 2em;
+        vertical-align: baseline;
+    }
     h3 {
-        font-size: 1.1rem;
-        line-height: 2rem;
+        font-size: 1.1em;
+        line-height: 2em;
         vertical-align: baseline;
     }
     a {
@@ -135,7 +140,12 @@ h3 .location {
     #summary {
         display: block;
         clear: both;
-        margin: 0.6rem 5% 0.6rem 5%;
+        margin: 0.6em 5% 0.6em 5%;
+    }
+    #skills-sections ul:not(.full-width) li {
+        display: inline-block;
+        width: 33%;
+        overflow-x: visible;
     }
 
     .noprint {
@@ -143,7 +153,6 @@ h3 .location {
     }
     .section-header {
         width: 15%;
-        font-size: 10pt;
     }
     .section-content {
         padding: 0;
