@@ -61,10 +61,6 @@ ul {
     list-style: url("../elements/bullet.svg");
 }
 
-#skills,
-#references {
-    align-items: center;
-}
 #skills-sections ul:not(.full-width) {
     width: 25%;
     display: inline-block;
