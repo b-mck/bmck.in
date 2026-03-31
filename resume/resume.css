@@ -61,9 +61,29 @@ ul {
     list-style: url("../elements/bullet.svg");
 }
 
-#skills-sections ul:not(.full-width) {
-    width: 25%;
+li {
+    margin-bottom: 5px;
+}
+
+#skills-sections .columns-3 li {
+    width: 30%;
     display: inline-block;
+    list-style: none;
+}
+
+#skills-sections .columns-2 li {
+    width: 45%;
+    display: inline-block;
+    list-style: none;
+}
+
+#skills-sections li::before {
+    content: url("../elements/bullet.svg");
+    display: inline-block;
+    height: 0.4em;
+    width: 0.4em;
+    margin-right: 0.4em;
+    margin-left: -0.8em;
 }
 
 .page-header {
